@@ -1,0 +1,135 @@
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$black: #0d0d0d;
+$green:#8cbf3f;
+$purple: #9453a6;
+
+#sponsorstitle {
+    font-family: 'Henny Penny';
+    font-size: 30pt;
+    text-align: center;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 5px 0;
+    height: 12vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sponsors {
+    display: grid;
+    width: 100%;
+    height: calc(50vh - 12vh - 40px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.sponsorbox {
+    font-family: 'Henny Penny';
+    color: $white !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.sponsorbox img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@mixin sponsorimage($image) {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url($image);
+    background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url($image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+
+    &:hover {
+
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url($image);
+
+        background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url($image);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+#walkons {
+    background-image: url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+    @include sponsorimage('../images/Walkons-Bistreaux-WEB-732x384.jpg');
+}
+
+#death {
+    background-image: url(../images/photo0jpg.jpg);
+    @include sponsorimage('../images/photo0jpg.jpg');
+}
+
+#ace {
+    background-image: url(../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg);
+    @include sponsorimage('../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg');
+}
+
+#haunted {
+    background-image: url(../images/haunted.jpg);
+    @include sponsorimage('../images/haunted.jpg');
+
+}
+
+#children {
+    background-image: url(../images/ThatFoodGallery_1556134689081-HR.jpg);
+    @include sponsorimage('../images/ThatFoodGallery_1556134689081-HR.jpg');
+
+}
+
+#sheraton {
+    background-image: url(../images/msyis-lobby-8584-hor-clsc.jpg);
+    @include sponsorimage('../images/msyis-lobby-8584-hor-clsc.jpg');
+}
+
+#ritz {
+    background-image: url(../images/50481969-rc_new_orleans_lobby_detail_v1.jpg);
+    @include sponsorimage('../images/50481969-rc_new_orleans_lobby_detail_v1.jpg');
+}
+
+#parking {
+    background-image: url(../images/P402.jpg);
+    @include sponsorimage('../images/P402.jpg');
+}
+
+@media (max-width: 720px) {
+    .sponsors {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height: auto;
+    }
+
+    .sponsorbox {
+        min-height: 100px;
+
+    }
+
+    .sponsorbox h2 {
+        font-size: 1.2em;
+    }
+}

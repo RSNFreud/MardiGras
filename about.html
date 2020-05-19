@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mardi Gras</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./">
+            <div class="logo"></div>
+        </a>
+        <span class="mobile"><i class="fa fa-bars"></i></span>
+        <ul id="menu">
+            <li><a href="./">Home</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="aboutbanner">
+        <h1>The Sheraton Hotel</h1>
+        <div class="link"><a href="https://www.marriott.com/hotels/travel/msyis-sheraton-new-orleans-hotel/">
+                More information &nbsp;<i class="fas fa-arrow-right"></i></a></div>
+    </section>
+
+    <section class="mayor">
+        <img id="mayorimg" src="images/LaToya_Cantrell.jpg">
+        <div class="mayorinfo">LaToya Cantrell (born April 3, 1972) is an American politician serving as the Mayor of
+            New Orleans, Louisiana, a post she has held since May 7, 2018. As the first black woman to hold the post and
+            a Democrat, Cantrell represented District B on the New Orleans City Council from 2012–2018.<p></p>
+            In 2012, Cantrell declared her candidacy for the New Orleans City Council seat vacated when former District
+            B representative Stacy Head won an election to an at-large position. After the November election, candidate
+            Dana Kaplan and Cantrell advanced to a December runoff, which Cantrell won with 54 percent of the vote.
+            Cantrell served out the balance of Head's term, and was unopposed for a full four-year term in 2014.
+            <p></p>
+            As a council member, Cantrell focused on health, housing, and criminal-justice issues. She introduced a bill
+            banning smoking at restaurants and bars within New Orleans, citing the health effects of secondhand smoke on
+            service industry workers. The council unanimously passed the bill in 2015.
+        </div>
+    </section>
+    <section class="about">
+        <img id="aboutimg" src="images/cayetano-gil-T0tb5Olqkis-unsplash.jpg">
+        <div class="aboutinfo">The holiday of Mardi Gras is celebrated in all of Louisiana, including the city of
+            New Orleans. Celebrations are concentrated for about two weeks before and through Shrove Tuesday, the
+            day before Ash Wednesday (the start of lent in the Western Christian tradition). Usually there is one
+            major parade each day (weather permitting); many days have several large parades. The largest and most
+            elaborate parades take place the last five days of the Mardi Gras season. In the final week, many events
+            occur throughout New Orleans and surrounding communities, including parades and balls (some of them
+            masquerade balls).
+            <p></p>
+            The parades in New Orleans are organized by social clubs known as krewes; most follow the same parade
+            schedule and route each year. The earliest-established krewes were the Mistick Krewe of Comus, the
+            earliest, Rex, the Knights of Momus and the Krewe of Proteus. Several modern "super krewes" are well
+            known for holding large parades and events, such as the Krewe of Endymion (which is best known for
+            naming celebrities as grand marshals for their parades), the Krewe of Bacchus (similarly known for
+            naming celebrities as their Kings), as well as the Zulu Social Aid & Pleasure Club—a predominantly
+            African American krewe. Float riders traditionally toss throws into the crowds. The most common throws
+            are strings of colorful plastic beads, doubloons, decorated plastic "throw cups", Moon Pies, and small
+            inexpensive toys, but throws can also include lingerie and more sordid items. Major krewes follow the
+            same parade schedule and route each year.</div>
+    </section>
+    <footer>
+        Site designed and built by Freud-Online
+    </footer>
+    <script>
+
+        $('.mobile').click(function () {
+            $('#menu').slideToggle();
+        });
+
+        window.onload = function (e) {
+            if (window.innerWidth > '800') {
+                imagesize();
+            }
+        }
+
+        function imagesize() {
+            document.querySelector('.mayorinfo').style.height = '100%';
+            document.querySelector('.aboutinfo').style.height = "100%";
+            let mayorheight = document.querySelector('.mayorinfo').clientHeight;
+            let aboutheight = document.querySelector('.aboutinfo').clientHeight;
+            document.querySelector('#mayorimg').style.height = mayorheight + "px";
+            document.querySelector('.mayorinfo').style.height = mayorheight + "px";
+            document.querySelector('#aboutimg').style.height = aboutheight + "px";
+            document.querySelector('.aboutinfo').style.height = aboutheight + "px";
+        }
+
+        window.onresize = function () {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

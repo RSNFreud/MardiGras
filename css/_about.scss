@@ -1,0 +1,119 @@
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$black: #0d0d0d;
+$green:#8cbf3f;
+$purple: #9453a6;
+
+.mayor {
+    min-height: 30vh;
+    padding: 5px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.mayor img,
+.about img {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.mayorinfo {
+    background-image: url('../images/boximage.png');
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 5px;
+    font-family: Roboto;
+    color: $white;
+    padding: 15px;
+    height: 100%;
+}
+
+.mayorinfo p,
+.about p {
+    margin: 10px 0;
+}
+
+.about img {
+    width: 30%;
+}
+
+.about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: calc(40vh - 30px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.aboutinfo {
+    background-image: url('../images/boximage.png');
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-left: 5px;
+    font-family: Roboto;
+    color: $white;
+    padding: 15px;
+    height: 100%;
+}
+
+.aboutbanner {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 191, 63, 0.4)), to(rgba(140, 191, 63, 0.4))), url(../images/sheraton.jpg);
+    background: linear-gradient(rgba(140, 191, 63, 0.4), rgba(140, 191, 63, 0.4)), url(../images/sheraton.jpg);
+    max-height: calc(30vh - 50px);
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: $white;
+    -ms-flex-line-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Roboto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 20px;
+    text-shadow: 3px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 800px) {
+
+    .about,
+    .mayor {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .about img,
+    .mayor img {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .aboutinfo,
+    .mayorinfo {
+        margin: 0;
+    }
+}

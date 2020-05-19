@@ -1,0 +1,82 @@
+.faqbanner {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 191, 63, 0.4)), to(rgba(140, 191, 63, 0.4))), url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+    background: linear-gradient(rgba(140, 191, 63, 0.4), rgba(140, 191, 63, 0.4)), url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+    max-height: calc(30vh - 50px);
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: $white;
+    -ms-flex-line-pack: center;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Roboto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 20px;
+    text-shadow: 3px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#accordion {
+    padding: 20px 50px;
+    min-height: calc(70vh - 75px);
+    font-family: Roboto;
+}
+
+.accordiontitle {
+    padding: 10px 0;
+}
+
+.accordiontitle a {
+    font-weight: bold;
+}
+
+#accordion h1 {
+    font-family: 'Henny Penny';
+    margin: 5px 0;
+    font-size: 2.5em;
+}
+
+.fa-chevron-down {
+    -webkit-transition: 0.4s all;
+    transition: 0.4s all;
+}
+
+.accordiontitle h3 {
+    cursor: pointer;
+    background-image: url(../images/boximage.png);
+    color: $white;
+    padding: 15px;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.accordiontitle div {
+    padding: 10px;
+    -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.accordiontitle h3:hover p {
+    display: block;
+}

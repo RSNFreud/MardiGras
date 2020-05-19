@@ -1,0 +1,54 @@
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$black: #0d0d0d;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Pattaya;
+    src: url(../fonts/Pattaya-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Henny Penny';
+    src: url(../fonts/HennyPenny-Regular.ttf);
+}
+
+a:-webkit-any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:-moz-any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer {
+    height: 40px;
+    padding: 5px;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    font-family: Pattaya;
+}
+
+@import "header";
+@import "slider";
+@import "sponsors";
+@import "banner";
+@import "about";
+@import "sponsorpage";
+@import "media";
+@import "faq";
+@import "contact";

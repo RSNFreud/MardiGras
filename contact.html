@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mardi Gras</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <a href="./">
+            <div class="logo"></div>
+        </a>
+        <span class="mobile"><i class="fa fa-bars"></i></span>
+        <ul id="menu">
+            <li><a href="./">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="contactbanner">
+        <h1>The Haunted Museum</h1>
+        <div class="link"><a href="https://www.bloodymarystours.com/">
+                More information &nbsp;<i class="fas fa-arrow-right"></i></a></div>
+    </section>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <form action="" id="contactform">
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+            <label for="lastname">Lastname:</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+            <input type="submit" value="Submit" id="submitme">
+        </form>
+    </section>
+    <footer>
+        Site designed and built by Freud-Online
+    </footer>
+    <script>
+        $('.mobile').click(function () {
+            $('#menu').slideToggle();
+        })
+        document.querySelector('#contactform').onsubmit = () => {
+            alert("Form submitted sucessfully!");
+        }
+    </script>
+</body>
+
+</html>

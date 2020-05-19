@@ -1,0 +1,67 @@
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$black: #0d0d0d;
+$green:#8cbf3f;
+$purple: #9453a6;
+
+.imageslider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(50vh - 50px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.featurebox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.white {
+    color: $white !important;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: 25% !important;
+}
+
+.featurebox img {
+    height: 60%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+
+.description {
+    font-family: 'Henny Penny';
+    height: 40%;
+    padding: 10px;
+    overflow: hidden;
+    color: $white;
+    background-color: $purple;
+    background-image: url(../images/boximage.png);
+    font-size: 0.8em;
+}
+
+#features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: calc(50vh - 50px);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mardi Gras</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <a href="./">
+            <div class="logo"></div>
+        </a>
+        <span class="mobile"><i class="fa fa-bars"></i></span>
+        <ul id="menu">
+            <li><a href="./">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li class="active"><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="faqbanner">
+        <h1>Walk-On's Bistreaux and Bar</h1>
+        <div class="link"><a href="https://walk-ons.com/">
+                More information &nbsp;<i class="fas fa-arrow-right"></i></a></div>
+    </section>
+    <section id="accordion">
+        <h1>FAQ</h1>
+        <div class="accordiontitle" onclick="togglefaq(this)">
+            <h3>What is Mardis Gras? <i class="fas fa-chevron-down"></i></h3 o>
+            <div>The holiday of Mardi Gras is celebrated in all of Louisiana, including the city of New Orleans.
+                Celebrations are concentrated for about two weeks before and through Shrove Tuesday, the day before Ash
+                Wednesday (the start of lent in the Western Christian tradition). Usually there is one major parade each
+                day (weather permitting); many days have several large parades. The largest and most elaborate parades
+                take place the last five days of the Mardi Gras season. In the final week, many events occur throughout
+                New Orleans and surrounding communities, including parades and balls (some of them masquerade balls).
+                More info can be <a href="about.html"><strong>found here</strong></a>.
+            </div>
+        </div>
+        <div class="accordiontitle" onclick="togglefaq(this)">
+            <h3>When is Mardis Gras?<i class="fas fa-chevron-down"></i></h3 o>
+            <div>Mardis Gras starts on Tuesday, 25 February 2020.
+            </div>
+        </div>
+        <div class="accordiontitle" onclick="togglefaq(this)">
+            <h3>Where can I stay?<i class="fas fa-chevron-down"></i></h3 o>
+            <div>There are many places you can stay around New Orleans! We recommend you try out <a
+                    href="ace.html"><strong>The Ace Hotel</strong>
+                </a> or <a href="sheraton.html"><strong>The Sheraton Hotel</strong> </a>
+            </div>
+        </div>
+        <div class="accordiontitle" onclick="togglefaq(this)">
+            <h3>Where are good attractions?<i class="fas fa-chevron-down"></i></h3 o>
+            <div>There are many good places around New Orleans! Why not try out a number of our sponsors such as <a
+                    href="childrensmuseum.html">The Children's Museum</a> or <a href="hauntedmuseum.html">The Haunted
+                    Musuem</a>. If you are hungry why not go to the <a href="walkon.html">Walk-On's Bistreaux and Bar
+                </a> and if you need some parking try out <a href="parking.html">P402 Premium Parking</a>.
+            </div>
+        </div>
+    </section>
+    <footer>
+        Site designed and built by Freud-Online
+    </footer>
+    <script>
+        $('.mobile').click(function () {
+            $('#menu').slideToggle();
+        })
+
+        function togglefaq(item) {
+            $(item.querySelector('div')).slideToggle();
+            if (item.querySelector('h3 i').style.transform == 'rotate(180deg)') {
+                item.querySelector('h3 i').style.transform = 'rotate(0deg)';
+            } else {
+                item.querySelector('h3 i').style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

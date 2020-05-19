@@ -1,0 +1,100 @@
+#headertitle {
+    font-family: 'Henny Penny';
+    font-size: 25pt;
+    text-align: center;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80px;
+}
+
+.sponsorbanner {
+    height: 30vh;
+    background-size: fill;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    color: $white;
+    padding: 10px;
+    font-family: Roboto;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    background-size: cover;
+}
+
+.maze {
+    background-image: url(../images/haunted.jpg);
+}
+
+.ace {
+    background-image: url(../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg);
+}
+
+.parking {
+    background-image: url(../images/P402.jpg);
+}
+
+.ritz {
+    background-image: url(../images/50481969-rc_new_orleans_lobby_detail_v1.jpg);
+}
+
+.walkon {
+    background-image: url(../images/Walkons-Bistreaux-WEB-732x384.jpg)
+}
+
+.sheraton {
+    background-image: url(../images/sheraton.jpg);
+}
+
+.museum {
+    background-image: url(../images/photo0jpg.jpg);
+}
+
+.info {
+    background: url('../images/boximage.png');
+    padding: 20px;
+    color: $white;
+    font-family: Roboto;
+    width: 50%;
+    min-height: calc(70vh - 170px);
+
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 50%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+}

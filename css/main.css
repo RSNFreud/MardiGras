@@ -1,0 +1,850 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Pattaya;
+  src: url(../fonts/Pattaya-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Henny Penny';
+  src: url(../fonts/HennyPenny-Regular.ttf);
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:-moz-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  height: 40px;
+  padding: 5px;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: Pattaya;
+}
+
+nav {
+  font-family: Pattaya;
+  background-color: #0d0d0d;
+  width: 100%;
+  border-top: 10px solid #f2cc0f;
+  position: relative;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 10;
+}
+
+nav ul,
+nav li {
+  color: #f2f2f2;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul {
+  margin: 0 10px;
+}
+
+nav li a {
+  padding: 10px;
+}
+
+nav li a:hover,
+.active {
+  background-color: #f2cc0f;
+  color: #0d0d0d;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.logo {
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  left: 0;
+  top: -45px;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  z-index: 10;
+}
+
+.logo:hover {
+  top: -30px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .mobile {
+    display: block;
+    margin: 0px 10px;
+    color: #f2f2f2;
+  }
+  .logo {
+    height: 130px;
+    width: 130px;
+    top: -35px;
+  }
+  .logo:hover {
+    top: -25px;
+  }
+  nav ul {
+    width: 100%;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: 39px;
+    background-color: #0d0d0d;
+    margin: 0;
+    padding-top: 60px;
+  }
+  nav li a {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+}
+
+.imageslider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(50vh - 50px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.featurebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.white {
+  color: #f2f2f2 !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 25% !important;
+}
+
+.featurebox img {
+  height: 60%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.description {
+  font-family: 'Henny Penny';
+  height: 40%;
+  padding: 10px;
+  overflow: hidden;
+  color: #f2f2f2;
+  background-color: #9453a6;
+  background-image: url(../images/boximage.png);
+  font-size: 0.8em;
+}
+
+#features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(50vh - 50px);
+}
+
+#sponsorstitle {
+  font-family: 'Henny Penny';
+  font-size: 30pt;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 5px 0;
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sponsors {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: calc(50vh - 12vh - 40px);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.sponsorbox {
+  font-family: 'Henny Penny';
+  color: #f2f2f2 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.sponsorbox img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#walkons {
+  background-image: url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/Walkons-Bistreaux-WEB-732x384.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/Walkons-Bistreaux-WEB-732x384.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#walkons:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/Walkons-Bistreaux-WEB-732x384.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/Walkons-Bistreaux-WEB-732x384.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#death {
+  background-image: url(../images/photo0jpg.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/photo0jpg.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/photo0jpg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#death:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/photo0jpg.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/photo0jpg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#ace {
+  background-image: url(../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#ace:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#haunted {
+  background-image: url(../images/haunted.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/haunted.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/haunted.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#haunted:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/haunted.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/haunted.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#children {
+  background-image: url(../images/ThatFoodGallery_1556134689081-HR.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/ThatFoodGallery_1556134689081-HR.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/ThatFoodGallery_1556134689081-HR.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#children:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/ThatFoodGallery_1556134689081-HR.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/ThatFoodGallery_1556134689081-HR.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sheraton {
+  background-image: url(../images/msyis-lobby-8584-hor-clsc.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/msyis-lobby-8584-hor-clsc.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/msyis-lobby-8584-hor-clsc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#sheraton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/msyis-lobby-8584-hor-clsc.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/msyis-lobby-8584-hor-clsc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#ritz {
+  background-image: url(../images/50481969-rc_new_orleans_lobby_detail_v1.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/50481969-rc_new_orleans_lobby_detail_v1.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/50481969-rc_new_orleans_lobby_detail_v1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#ritz:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/50481969-rc_new_orleans_lobby_detail_v1.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/50481969-rc_new_orleans_lobby_detail_v1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#parking {
+  background-image: url(../images/P402.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.7)), to(rgba(148, 83, 166, 0.7))), url("../images/P402.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.7), rgba(148, 83, 166, 0.7)), url("../images/P402.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+#parking:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(148, 83, 166, 0.4)), to(rgba(148, 83, 166, 0.4))), url("../images/P402.jpg");
+  background: linear-gradient(rgba(148, 83, 166, 0.4), rgba(148, 83, 166, 0.4)), url("../images/P402.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 720px) {
+  .sponsors {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    height: auto;
+  }
+  .sponsorbox {
+    min-height: 100px;
+  }
+  .sponsorbox h2 {
+    font-size: 1.2em;
+  }
+}
+
+.banner .sponsorbox {
+  height: 100%;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(30vh - 50px);
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.mayor {
+  min-height: 30vh;
+  padding: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.mayor img,
+.about img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mayorinfo {
+  background-image: url("../images/boximage.png");
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 5px;
+  font-family: Roboto;
+  color: #f2f2f2;
+  padding: 15px;
+  height: 100%;
+}
+
+.mayorinfo p,
+.about p {
+  margin: 10px 0;
+}
+
+.about img {
+  width: 30%;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(40vh - 30px);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.aboutinfo {
+  background-image: url("../images/boximage.png");
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 5px;
+  font-family: Roboto;
+  color: #f2f2f2;
+  padding: 15px;
+  height: 100%;
+}
+
+.aboutbanner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 191, 63, 0.4)), to(rgba(140, 191, 63, 0.4))), url(../images/sheraton.jpg);
+  background: linear-gradient(rgba(140, 191, 63, 0.4), rgba(140, 191, 63, 0.4)), url(../images/sheraton.jpg);
+  max-height: calc(30vh - 50px);
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f2f2f2;
+  -ms-flex-line-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Roboto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 20px;
+  text-shadow: 3px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 800px) {
+  .about,
+  .mayor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+  }
+  .about img,
+  .mayor img {
+    height: 30vh;
+    width: 100%;
+  }
+  .aboutinfo,
+  .mayorinfo {
+    margin: 0;
+  }
+}
+
+#headertitle {
+  font-family: 'Henny Penny';
+  font-size: 25pt;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 80px;
+}
+
+.sponsorbanner {
+  height: 30vh;
+  background-size: fill;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: #f2f2f2;
+  padding: 10px;
+  font-family: Roboto;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  background-size: cover;
+}
+
+.maze {
+  background-image: url(../images/haunted.jpg);
+}
+
+.ace {
+  background-image: url(../images/ACE-NOLA-JosephineEstelle.jpg.1200x800_q85_crop.jpg);
+}
+
+.parking {
+  background-image: url(../images/P402.jpg);
+}
+
+.ritz {
+  background-image: url(../images/50481969-rc_new_orleans_lobby_detail_v1.jpg);
+}
+
+.walkon {
+  background-image: url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+}
+
+.sheraton {
+  background-image: url(../images/sheraton.jpg);
+}
+
+.museum {
+  background-image: url(../images/photo0jpg.jpg);
+}
+
+.info {
+  background: url("../images/boximage.png");
+  padding: 20px;
+  color: #f2f2f2;
+  font-family: Roboto;
+  width: 50%;
+  min-height: calc(70vh - 170px);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.info p {
+  margin: 10px 0;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 50%;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.videos {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 5px;
+  height: 40vh;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.image-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5px;
+}
+
+@media (max-width: 720px) {
+  .image-gallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.faqbanner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 191, 63, 0.4)), to(rgba(140, 191, 63, 0.4))), url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+  background: linear-gradient(rgba(140, 191, 63, 0.4), rgba(140, 191, 63, 0.4)), url(../images/Walkons-Bistreaux-WEB-732x384.jpg);
+  max-height: calc(30vh - 50px);
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f2f2f2;
+  -ms-flex-line-pack: center;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Roboto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 20px;
+  text-shadow: 3px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#accordion {
+  padding: 20px 50px;
+  min-height: calc(70vh - 75px);
+  font-family: Roboto;
+}
+
+.accordiontitle {
+  padding: 10px 0;
+}
+
+.accordiontitle a {
+  font-weight: bold;
+}
+
+#accordion h1 {
+  font-family: 'Henny Penny';
+  margin: 5px 0;
+  font-size: 2.5em;
+}
+
+.fa-chevron-down {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.accordiontitle h3 {
+  cursor: pointer;
+  background-image: url(../images/boximage.png);
+  color: #f2f2f2;
+  padding: 15px;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.accordiontitle div {
+  padding: 10px;
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.accordiontitle h3:hover p {
+  display: block;
+}
+
+.contactbanner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(140, 191, 63, 0.4)), to(rgba(140, 191, 63, 0.4))), url(../images/haunted.jpg);
+  background: linear-gradient(rgba(140, 191, 63, 0.4), rgba(140, 191, 63, 0.4)), url(../images/haunted.jpg);
+  max-height: calc(30vh - 50px);
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f2f2f2;
+  -ms-flex-line-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Roboto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 3px 0.5px rgba(0, 0, 0, 0.4);
+}
+
+#contact h1 {
+  font-family: 'Henny Penny';
+  margin: 5px 0px 10px;
+  font-size: 2.5em;
+}
+
+#contact {
+  padding: 20px 50px;
+  min-height: calc(70vh - 75px);
+  font-family: Roboto;
+}
+
+#contact form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 5px 0;
+  font-family: inherit;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-bottom: 1px solid black;
+}
+
+input:focus,
+input:active {
+  outline: 0;
+}
+
+#contact form {
+  width: 100%;
+}
+
+textarea {
+  padding: 5px;
+  min-width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+input[type="submit"] {
+  width: auto !important;
+  padding: 5px 10px;
+}
+
+label {
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

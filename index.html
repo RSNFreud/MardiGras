@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mardi Gras</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./">
+            <div class="logo"></div>
+        </a>
+        <span class="mobile"><i class="fa fa-bars"></i></span>
+        <ul id="menu">
+            <li class="active"><a href="./">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="imageslider">
+        <div class="swiper-container">
+            <div class="swiper-button-prev white"></div>
+            <div class="swiper-button-next white"></div>
+            <div id="features" class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="featurebox">
+                        <img src="images/thomas-kinto-M9YN-JH9J5w-unsplash.jpg" alt="">
+                        <div class="description">Mardi Gras or Fat Tuesday, refers to events of the Carnival
+                            celebration, beginning on or after the Christian feasts of the Epiphany </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featurebox">
+                        <img src="images/kogulanath-ayappan-PnfypH4sJ1Y-unsplash.jpg" alt="">
+                        <div class="description"> Mardi Gras is French for "Fat Tuesday", reflecting the practice of the
+                            last night of eating rich, fatty foods before the ritual fasting of the Lenten season.</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featurebox">
+                        <img src="images/matthew-t-rader-Jq9zn6lyf1Q-unsplash.jpg" alt="">
+                        <div class="description">Related popular practices are associated with Shrovetide celebrations
+                            before the fasting and religious obligations associated with the penitential season of Lent.
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featurebox">
+                        <img src="images/marc-vandecasteele-sKf8m6OTSUg-unsplash.jpg" alt="">
+                        <div class="description">In countries such as the United Kingdom, Mardi Gras is also known as
+                            Shrove Tuesday, which is derived from the word shrive, meaning "to administer the sacrament
+                            of confession to; to absolve".</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="featurebox">
+                        <img src="images/marc-vandecasteele--LSkmQn32A0-unsplash.jpg" alt="">
+                        <div class="description">The festival is more commonly associated with Christian tradition. In
+                            the Gospel of Matthew the biblical Magi (also called the 'Three Wise Men' or 'Three Kings')
+                            visited Jesus with gifts containing gold, frankincense, and myrrh.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 id="sponsorstitle">Our Sponsors</h1>
+    <section class="sponsors">
+        <a href="walkon.html" class="sponsorbox" id="walkons">
+            <h2>Walk-On's Bistreaux and Bar</h2>
+        </a>
+        <a href="museumofdeath.html" class="sponsorbox" id="death">
+            <h2>Museum of Death</h2>
+        </a>
+        <a href="hauntedmuseum.html" class="sponsorbox" id="haunted">
+            <h2>Haunted Museum</h2>
+        </a>
+        <a href="childrensmuseum.html" class="sponsorbox" id="children">
+            <h2>Louisiana Children's Museum</h2>
+        </a>
+        <a href="sheraton.html" class="sponsorbox" id="sheraton">
+            <h2>The Sheraton Hotel</h2>
+        </a>
+        <a href="parking.html" class="sponsorbox" id="parking">
+            <h2>Premium Parking</h2>
+        </a>
+        <a href="ritz.html" class="sponsorbox" id="ritz">
+            <h2>Ritz-Carlton Hotel</h2>
+        </a>
+        <a href="ace.html" class="sponsorbox" id="ace">
+            <h2>Ace Hotel</h2>
+        </a>
+    </section>
+    <footer>
+        Site designed and built by Freud-Online
+    </footer>
+    <script>
+        $('.mobile').click(function () {
+            console.log('test');
+            $('#menu').slideToggle();
+        })
+        $(document).ready(function () {
+            //initialize swiper when document ready
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 5,
+                speed: 150,
+                height: "100%",
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    720: {
+                        slidesPerView: 3,
+                        spaceBetween: 5
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
